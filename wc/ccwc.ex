@@ -18,8 +18,7 @@ defmodule CCWC do
 
   defp normalize_text(text) do
     text
-    |> String.trim_trailing()
-    |> String.replace(~r/\r\n|\r/, "\n")
+    |> String.replace(~r/\r\n|\r|\n/, "|")
   end
 
   def call(arg_list) do
@@ -27,7 +26,6 @@ defmodule CCWC do
 
     input_filename = Enum.at(parsed_args.files, 0)
     text = get_text(input_filename)
-    # IO.puts(text)
 
     output =
       case parsed_args.options do
@@ -117,7 +115,7 @@ defmodule CCWC do
     text
     |> normalize_text()
     |> String.split("")
-    |> Enum.count(fn char -> char == "\n" end)
+    |> Enum.count(fn char -> char == "|" end)
   end
 
   defp do_word_count(text) do
