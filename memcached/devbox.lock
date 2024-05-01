@@ -1,0 +1,59 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "elixir@latest": {
+      "last_modified": "2024-04-02T02:53:36Z",
+      "resolved": "github:NixOS/nixpkgs/080a4a27f206d07724b88da096e27ef63401a504#elixir",
+      "source": "devbox-search",
+      "version": "1.16.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kv26jjjzv7aqaq42v8mbcka5r92przlb-elixir-1.16.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/kv26jjjzv7aqaq42v8mbcka5r92przlb-elixir-1.16.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/y2733115iclgvv4m0kp2f32w0r8pay6c-elixir-1.16.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/y2733115iclgvv4m0kp2f32w0r8pay6c-elixir-1.16.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/x1xjlx50yn3ga8lklfdkn4ij72c1b28s-elixir-1.16.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/x1xjlx50yn3ga8lklfdkn4ij72c1b28s-elixir-1.16.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/n1s9438kra8zxwf9dyiv2ygyki61pgb3-elixir-1.16.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/n1s9438kra8zxwf9dyiv2ygyki61pgb3-elixir-1.16.2"
+        }
+      }
+    },
+    "telnet@latest": {
+      "last_modified": "2022-02-14T23:21:50-05:00",
+      "resolved": "github:NixOS/nixpkgs/3a641defd170a4ef25ce8c7c64cb13f91f867fca#telnet",
+      "source": "devbox-search",
+      "version": "2.2"
+    }
+  }
+}
