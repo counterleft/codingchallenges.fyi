@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.5/.schema/devbox.schema.json",
+  "packages": [
+    "redis@latest",
+    "rustup@latest",
+    "libiconv@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "set projectDir $(readlink -f .)",
+      "set rustupHomeDir \"$projectDir\"/.rustup",
+      "mkdir -p $rustupHomeDir",
+      "set -x RUSTUP_HOME $rustupHomeDir",
+      "set -x LIBRARY_PATH $LIBRARY_PATH:\"$projectDir/nix/profile/default/lib\"",
+      "rustup default 1.76.0",
+      "cargo fetch"
+    ],
+    "scripts": {
+      "test": "cargo test -- --show-output",
+      "start": "cargo run",
+      "build-docs": "cargo doc"
+    }
+  }
+}
