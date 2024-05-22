@@ -1,8 +1,8 @@
 defmodule Memcached.TcpWorker do
   @moduledoc """
-  The TcpWorker module keeps the TCP connection alive for a given client.
-  It collects all the input sent from the client over the network and 
-  forwards it to the Command module to do the actual work with the Memcached service.
+  The TcpWorker module keeps the TCP connection alive for a given client. It
+  collects all the input sent from the client over the network and forwards it
+  to the Command module to do the actual work with the Memcached service.
   """
   use GenServer
 
@@ -12,6 +12,7 @@ defmodule Memcached.TcpWorker do
 
   def handle_info({:tcp, socket, <<"set", args::binary>>}, _state) do
     # TODO Invalid pattern; invalid set command
+
     [key, flags, exp_time, byte_count] =
       args
       |> String.trim()
